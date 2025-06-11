@@ -1,6 +1,6 @@
 # 🚀 Cypress API Automation Project
 
-This project uses [Cypress](https://www.cypress.io/) to perform automated API testing on public REST APIs such as [JSONPlaceholder](https://jsonplaceholder.typicode.com/), [ReqRes](https://reqres.in/), and [Simple Books API](https://simple-books-api.glitch.me). It covers HTTP methods, query parameters, authorization headers, and response validations.
+This project uses [Cypress](https://www.cypress.io/) to perform automated API testing on public REST APIs such as [JSONPlaceholder](https://jsonplaceholder.typicode.com/), [ReqRes](https://reqres.in/), and [Simple Books API](https://simple-books-api.glitch.me). It covers HTTP methods, query parameters, authorization headers, JSON response parsing, and response validations.
 
 ---
 
@@ -17,20 +17,20 @@ cypress-api-automation/
 │           ├── HTTPRequest.cy.js
 │           ├── PostCalls.cy.js
 │           ├── QueryParams.cy.js
-│           └── HeadersAndCookiesAndBearerTokenAuth.cy.js
+│           ├── HeadersAndCookiesAndBearerTokenAuth.cy.js
+│           └── ParsingJSONResponse.cy.js
 ├── cypress.config.js
 ├── package.json
 ├── .gitignore
 └── README.md
-
-````
+```
 
 ---
 
 ## 📦 Prerequisites
 
-- [Node.js](https://nodejs.org/) (v14 or later)
-- npm (comes with Node.js)
+* [Node.js](https://nodejs.org/) (v14 or later)
+* npm (comes with Node.js)
 
 ---
 
@@ -38,12 +38,12 @@ cypress-api-automation/
 
 ```bash
 # Clone the repo
-git clone <your-repo-url>
+git clone <https://github.com/Tarekkamal-B/api-automation-cypress>
 cd cypress-api-automation
 
 # Install dependencies
 npm install
-````
+```
 
 ---
 
@@ -68,6 +68,7 @@ npx cypress run --spec "cypress/e2e/APITesting/HTTPRequest.cy.js"
 npx cypress run --spec "cypress/e2e/APITesting/PostCalls.cy.js"
 npx cypress run --spec "cypress/e2e/APITesting/QueryParams.cy.js"
 npx cypress run --spec "cypress/e2e/APITesting/HeadersAndCookiesAndBearerTokenAuth.cy.js"
+npx cypress run --spec "cypress/e2e/APITesting/ParsingJSONResponse.cy.js"
 ```
 
 ---
@@ -114,11 +115,21 @@ npx cypress run --spec "cypress/e2e/APITesting/HeadersAndCookiesAndBearerTokenAu
 
 ---
 
+### 📄 `ParsingJSONResponse.cy.js`
+
+| Test Case                  | Description                                                               |
+| -------------------------- | ------------------------------------------------------------------------- |
+| Parsing Simple JSON        | Validates specific fields like title, price, and rating from product data |
+| Parsing Complex JSON Array | Loops through JSON array to calculate and assert total price              |
+
+---
+
 ## 📌 Notes
 
 * JSONPlaceholder and ReqRes APIs do **not** persist data; they return successful responses for testing purposes.
 * The Simple Books API supports Bearer token auth for protected routes like `/orders`.
 * Designed for learning Cypress API automation with realistic request/response structures.
+* The Fakestore API is used to demonstrate real-world JSON parsing techniques.
 
 ---
 
