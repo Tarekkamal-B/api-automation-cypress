@@ -1,6 +1,22 @@
 # 🚀 Cypress API Automation Project
 
-This project uses [Cypress](https://www.cypress.io/) to perform automated API testing on public REST APIs such as [JSONPlaceholder](https://jsonplaceholder.typicode.com/), [ReqRes](https://reqres.in/), and [Simple Books API](https://simple-books-api.glitch.me). It covers HTTP methods, query parameters, authorization headers, JSON response parsing, and response validations.
+This project demonstrates how to perform **automated API testing** using [Cypress](https://www.cypress.io/) and JavaScript. It covers **REST API CRUD operations**, **query parameters**, **authorization headers**, **JSON response parsing**, and **automated assertions** on public APIs like:
+
+- [JSONPlaceholder](https://jsonplaceholder.typicode.com/)
+- [ReqRes](https://reqres.in/)
+- [Simple Books API](https://simple-books-api.glitch.me/)
+
+---
+
+## ✅ Features
+
+- Full coverage of HTTP methods: GET, POST, PUT, DELETE
+- Request types: Static payloads, dynamic data, fixtures
+- Validates status codes, headers, response body, and performance
+- Authentication using Bearer tokens
+- Parses both simple and nested JSON data
+- Modular & reusable Cypress structure
+- Easy to run via CLI or GUI
 
 ---
 
@@ -23,7 +39,8 @@ cypress-api-automation/
 ├── package.json
 ├── .gitignore
 └── README.md
-```
+
+````
 
 ---
 
@@ -38,12 +55,12 @@ cypress-api-automation/
 
 ```bash
 # Clone the repo
-git clone <https://github.com/Tarekkamal-B/api-automation-cypress>
+git clone https://github.com/Tarekkamal-B/api-automation-cypress
 cd cypress-api-automation
 
 # Install dependencies
 npm install
-```
+````
 
 ---
 
@@ -128,9 +145,17 @@ npx cypress run --spec "cypress/e2e/APITesting/ParsingJSONResponse.cy.js"
 
 * JSONPlaceholder and ReqRes APIs do **not** persist data; they return successful responses for testing purposes.
 * The Simple Books API supports Bearer token auth for protected routes like `/orders`.
-* Designed for learning Cypress API automation with realistic request/response structures.
-* The Fakestore API is used to demonstrate real-world JSON parsing techniques.
+* Designed to demonstrate real-world Cypress API testing practices.
+* Fakestore API is used for complex response validation and parsing.
 
 ---
 
+## 👨‍💻 Author
+
+**Tarek Kamal**
+📧 [tarekkamalaboelmajd@gmail.com](mailto:tarekkamalaboelmajd@gmail.com)
+🔗 [LinkedIn](https://www.linkedin.com/in/tarek-kamal-251477326)
+
+
+---
 
